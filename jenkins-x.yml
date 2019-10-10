@@ -119,3 +119,10 @@ pipelineConfig:
                 dir: /workspace/source/env
                 command: jx
                 args: ['step','replicate', 'secret', 'tls-cb-aps-poc-consumer.*', '-r', 'jx-staging', '-r', 'jx-production', '--create-namespace']
+              - args:
+                - diagnose
+                - --show
+                - health            
+                command: jx
+                dir: /workspace/source/env
+                name: verify-health
